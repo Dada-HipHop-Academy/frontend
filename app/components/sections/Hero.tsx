@@ -12,8 +12,8 @@ const Hero = () => {
 
             {/* Overlays */}
             <div className="absolute inset-0 bg-black/60" />
-            <div className="absolute inset-0 bg-gradient-to-bl from-red-600/40 via-transparent to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-tr from-red-600/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-bl from-red-600/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-tr from-red-600/40 via-transparent to-transparent" />
 
             {/* Content */}
             <div className="relative z-10 flex h-full w-full items-center justify-center px-4 sm:px-6 lg:px-8">

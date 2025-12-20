@@ -8,7 +8,7 @@ export default function CoursActivites() {
                         <img
                             src="/about1.jpg"
                             alt="Dada Academy"
-                            className="w-full rounded-[2rem] object-cover"
+                            className="w-full rounded-4xl object-cover"
                         />
                         <div>
                             <h1 className="text-6xl font-medium tracking-wider font-bebas mb-6">
@@ -138,7 +138,7 @@ export default function CoursActivites() {
                 </section>
                 <section className="mt-15">
                     <div className="p-5 rounded-2xl border border-gray-600">
-                        <div className="flex flex-row justify-between gap-20 justify-center">
+                        <div className="flex flex-row justify-between gap-20">
                             <div>
                                 <h1 className="text-[#E63946] uppercase font-bebas tracking-wider text-5xl mb-6">
                                     Coaching individuel

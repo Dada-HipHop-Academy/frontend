@@ -17,7 +17,7 @@ export default function Apropos() {
                         <img
                             src="/about1.jpg"
                             alt="Dada Academy"
-                            className="w-full rounded-[2rem] object-cover"
+                            className="w-full rounded-4xl object-cover"
                         />
 
                         {/* Text */}
@@ -57,7 +57,7 @@ export default function Apropos() {
                         <img
                             src="/about2.png"
                             alt="Dada Academy"
-                            className="w-full rounded-[2rem] object-cover"
+                            className="w-full rounded-4xl object-cover"
                         />
                     </div>
                 </div>
