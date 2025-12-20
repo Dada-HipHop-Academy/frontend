@@ -15,7 +15,7 @@ export default function Apropos() {
 
                         {/* Image */}
                         <img
-                            src="/about1.png"
+                            src="/about1.jpg"
                             alt="Dada Academy"
                             className="w-full rounded-[2rem] object-cover"
                         />
