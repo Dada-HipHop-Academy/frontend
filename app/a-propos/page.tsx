@@ -29,7 +29,7 @@ export default function Apropos() {
                             </p>
 
                             <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                                Fondé par <span className="font-semibold">Ghda Belgacem</span>, danseuse,
+                                Fondé par <span className="font-semibold">Ghada Belgacem</span>, danseuse,
                                 coach et créatrice de contenus, notre espace met en avant les
                                 valeurs de la culture urbaine : énergie, créativité, liberté et
                                 dépassement.
