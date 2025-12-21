@@ -4,7 +4,7 @@ export default function SutdioMusique() {
             title: "ENREGISTREMENT VOCAL",
             description:
                 "Cabine acoustique professionnelle et équipement haut de gamme pour des prises de son cristallines.",
-            color: "bg-red-100",
+            color: "bg-red-300",
             textColor: "text-[#E63946]",
         },
         {
@@ -18,7 +18,7 @@ export default function SutdioMusique() {
             title: "MIXAGE ET EDITING",
             description:
                 "Post-production professionnelle pour un son parfaitement équilibré et prêt pour la diffusion.",
-            color: "bg-red-100",
+            color: "bg-red-300",
             textColor: "text-[#E63946]",
         },
         {
@@ -32,7 +32,7 @@ export default function SutdioMusique() {
             title: "TOURNAGE VIDÉOS",
             description:
                 "Sessions live et clips vidéo filmés dans notre studio avec éclairage professionnel.",
-            color: "bg-red-100",
+            color: "bg-red-300",
             textColor: "text-[#E63946]",
         },
         {
@@ -101,7 +101,7 @@ export default function SutdioMusique() {
                 </section>
                 <section className="mt-20">
                     <h2 className="uppercase font-bebas tracking-wider text-4xl text-center">
-                        Pou <span className="text-[#E63946]">qui ?</span>
+                        Pour <span className="text-[#E63946]">qui ?</span>
                     </h2>
                     <p className="text-lg mb-6 text-center">Notre studio accueille tous les profils créatifs</p>
                     <div className="flex flex-wrap gap-4 justify-center">

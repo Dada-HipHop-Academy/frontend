@@ -10,7 +10,7 @@ const Header = () => {
         {href: "/a-propos", label: "À propos"},
         {href: "/cours-activites", label: "Cours & Activités"},
         {href: "/studio-musique", label: "Studio Musique"},
-        {href: "/workshops-evénements", label: "Workshops & Événements"},
+        {href: "/workshops-evenements", label: "Workshops & Événements"},
         {href: "/actualités", label: "Actualités"},
         {href: "/dada-réseaux-artist", label: "Dada Réseaux Artist"}
     ];

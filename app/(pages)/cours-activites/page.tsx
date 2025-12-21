@@ -26,7 +26,7 @@ export default function CoursActivites() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-5 mb-15">
                         {/*CARD 1*/}
                         <div className="border border-gray-700 rounded-xl p-6 shadow-lg">
-                            <div className="w-12 h-12 bg-red-100 rounded-md mb-4" />
+                            <div className="w-12 h-12 bg-red-300 rounded-md mb-4" />
                             <h3 className="text-[#E63946] text-3xl mb-2 uppercase font-bebas tracking-wider">
                                 cours de dance
                             </h3>
@@ -53,7 +53,7 @@ export default function CoursActivites() {
                         </div>
                         {/*CARD 3*/}
                         <div className="border border-gray-700 rounded-xl p-6 shadow-lg">
-                            <div className="w-12 h-12 bg-red-100 rounded-md mb-4" />
+                            <div className="w-12 h-12 bg-red-300 rounded-md mb-4" />
                             <h3 className="text-[#E63946] text-3xl mb-2 uppercase font-bebas tracking-wider">
                                 cours bien etre
                             </h3>
