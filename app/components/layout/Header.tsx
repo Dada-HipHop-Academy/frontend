@@ -1,18 +1,23 @@
 "use client";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const Header = () => {
     const pathName = usePathname();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
     const navItems = [
-        {href: "/", label: "Accueil"},
-        {href: "/a-propos", label: "À propos"},
-        {href: "/cours-activites", label: "Cours & Activités"},
-        {href: "/studio-musique", label: "Studio Musique"},
-        {href: "/workshops-evenements", label: "Workshops & Événements"},
-        {href: "/actualités", label: "Actualités"},
-        {href: "/dada-réseaux-artist", label: "Dada Réseaux Artist"}
+        { href: "/", label: "Accueil" },
+        { href: "/a-propos", label: "À propos" },
+        { href: "/cours-activites", label: "Cours & Activités" },
+        { href: "/studio-musique", label: "Studio Musique" },
+        { href: "/workshops-evenements", label: "Workshops & Événements" },
+        { href: "/actualités", label: "Actualités" },
+        { href: "/dada-réseaux-artist", label: "Dada Réseaux Artist" }
     ];
 
     return (
@@ -33,7 +38,24 @@ const Header = () => {
                         ))}
                     </div>
                 </nav>
+                {/*Mobile Menu Button*/}
+                <button className="md:hidden flex items-center" onClick={toggleMenu} aria-label={isMenuOpen ? "Close menu" : "Open menu"}>
+                    {isMenuOpen
+                        ? <X className="text-[#E63946]" />
+                        : <Menu className="text-[#E63946]" />}
+                </button>
             </div>
+            {isMenuOpen && (
+                <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-4">
+                    <div className="flex flex-col space-y-4">
+                        {navItems.map((item) => (
+                            <Link href={item.href} key={item.href} className={`hover:bg-[#4ECDC4] flex items-center cursor-pointer text-black py-1 px-2 rounded-md ${pathName === item.href ? "bg-[#4ECDC4]" : "bg-white"}`}>
+                                {item.label}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            )}
         </header>
     );
 }

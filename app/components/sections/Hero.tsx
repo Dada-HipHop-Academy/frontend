@@ -18,13 +18,13 @@ const Hero = () => {
             {/* Content */}
             <div className="relative z-10 flex h-full w-full items-center justify-center px-4 sm:px-6 lg:px-8">
                 <div className="text-center">
-                    <h1 className="font-bebas tracking-wider text-5xl md:text-6xl lg:text-8xl font-medium mb-6 text-white uppercase">
+                    <h1 className="font-bebas tracking-wider text-5xl md:text-6xl lg:text-8xl font-medium md:mb-6 text-white uppercase">
                         DADA HIP HOP
                         <br />
                         ACADEMY
                     </h1>
 
-                    <h3 className="text-white text-3xl md:text-5xl font-bold mb-4">
+                    <h3 className="text-white text-2xl md:text-5xl font-bold md:mb-4">
                         Danse. Culture. Création.
                     </h3>
 
