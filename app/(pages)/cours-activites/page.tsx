@@ -77,7 +77,7 @@ export default function CoursActivites() {
                         </div>
                     </div>
                 </section>
-                <section>
+                <section id='cours'>
                     <h2 className="text-3xl font-medium tracking-wider font-bebas">Tous Nos <span className="text-[#E63946]">Cours</span></h2>
                     <p className="">Des programmes adaptés à tous les niveaux, du débutant à l'expert.</p>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-5 mb-15">

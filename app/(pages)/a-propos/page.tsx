@@ -1,6 +1,7 @@
 "use client";
 
 import { Zap, Plane, Trophy, Palette, ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Apropos() {
@@ -71,9 +72,9 @@ export default function Apropos() {
                                 dépassement.
                             </p>
 
-                            <button className="bg-[#4ECDC4] hover:bg-teal-600 transition text-white px-5 py-3 rounded-md font-semibold cursor-pointer">
+                            <Link href="/cours-activites#cours" className="bg-[#4ECDC4] hover:bg-teal-600 transition text-white px-5 py-3 rounded-md font-semibold cursor-pointer">
                                 voir les cours
-                            </button>
+                            </Link>
                         </div>
                     </div>
                     {/*ROW 2*/}

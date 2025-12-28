@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Hero from "./components/sections/Hero";
 import { KeyboardMusic, Users } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -46,7 +47,7 @@ export default function Home() {
                 <p className="text-black mb-6">
                   Explorez nos styles de danse et trouvez votre rythme.
                 </p>
-                <button className="text-[#E63946] font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                <button className="text-[#E63946] font-semibold flex items-center gap-2 hover:gap-3 transition-all cursor-pointer">
                   Explorer <span>→</span>
                 </button>
               </div>
@@ -61,9 +62,9 @@ export default function Home() {
                 <p className="text-black mb-6">
                   Un studio musique pro pour enregistrer vos sons.
                 </p>
-                <button className="text-[#E63946] font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                <Link href="/studio-musique" className="text-[#E63946] font-semibold flex items-center gap-2 hover:gap-3 transition-all cursor-pointer">
                   Explorer <span>→</span>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
