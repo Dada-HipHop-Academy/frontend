@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Hero from "./components/sections/Hero";
+import { KeyboardMusic, Users } from "lucide-react";
 
 export default function Home() {
   return (
@@ -36,7 +37,9 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">  
               {/*Card1*/}
               <div className="border border-[#E63946] rounded-xl p-6 shadow-lg">
-                <div className="w-12 h-12 bg-red-100 rounded-md mb-4" />
+                <div className="w-12 h-12 bg-red-100 rounded-md mb-4 flex justify-center items-center">
+                  <Users className="text-[#E63946]"/>
+                </div>
                 <h3 className="text-[#E63946] font-bold text-lg mb-2">
                   Rejoindre un club
                 </h3>
@@ -49,7 +52,9 @@ export default function Home() {
               </div>
               {/*Card2*/}
               <div className="border border-[#E63946] rounded-xl p-6 shadow-lg">
-                <div className="w-12 h-12 bg-red-100 rounded-md mb-4" />
+                <div className="w-12 h-12 bg-red-100 rounded-md mb-4 flex justify-center items-center">
+                  <KeyboardMusic className="text-[#E63946]"/>
+                </div>
                 <h3 className="text-[#E63946] font-bold text-lg mb-2">
                   Réserver au studio musique
                 </h3>
@@ -64,7 +69,7 @@ export default function Home() {
           </div>
           {/*Right Image*/}
           <div className="hidden lg:flex justify-center lg:justify-end">
-            <img src="/accueilImg1.jpg" alt="Dada Hip Hop" className="w-full max-w-md lg:max-w-lg rounded-[2rem] object-cover"/>
+            <img src="/accueilImg1.jpg" alt="Dada Hip Hop" className="w-full max-w-md lg:max-w-lg rounded-4xl object-cover"/>
           </div>
         </div>
       </section>
