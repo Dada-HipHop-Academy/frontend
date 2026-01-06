@@ -30,6 +30,21 @@ export default function Apropos() {
         }
     ];
 
+    const list = [
+        {
+            title: "MISSION",
+            description: "Promouvoir la danse, le bien-être et la création artistique à travers un espace moderne et inclusif."
+        },
+        {
+            title: "VISION",
+            description: "Créer une plateforme culturelle et sportive qui révèle les talents et inspire la nouvelle génération."
+        },
+        {
+            title: "VALEURS",
+            description: "Créativité, Respect, Energie, Confiance, Excellence, Communauté"
+        }
+    ]
+
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev + 1) % cards.length);
     };
@@ -39,7 +54,7 @@ export default function Apropos() {
     };
 
     return (
-        <div className="relative w-full overflow-hidden py-28">
+        <div className="relative w-full overflow-hidden pt-28 pb-20">
             <h1 className="text-center text-4xl md:text-6xl font-medium tracking-wider font-bebas">
                 Qui sommes-nous ?
             </h1>
@@ -103,6 +118,14 @@ export default function Apropos() {
                         />
                     </div>
                 </div>
+            </section>
+            <section className="px-4 md:px-6 lg:px-16 md: pt-10 lg:pt-15 md:pt-15 grid grid-cols-1 lg:grid-cols-3 gap-10">
+                {list.map((item) => (
+                    <div className="px-8 py-4 border border-gray-600 rounded-xl shadow-lg" key={item.title}>
+                        <h2 className="text-[#E63946] font-medium tracking-wider font-bebas text-3xl  mb-2">{item.title}</h2>
+                        <p className="text-lg">{item.description}</p>
+                    </div>
+                ))}
             </section>
             {/*<section className="px-4 md:px-6 lg:px-16 pt-5 md:pt-10">
                 <h1 className="text-center text-4xl md:text-6xl font-medium tracking-wider font-bebas">

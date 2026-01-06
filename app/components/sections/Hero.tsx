@@ -5,7 +5,7 @@ const Hero = () => {
         <div className="relative h-screen w-full overflow-hidden">
             {/* Image */}
             <img
-                src="/heroimg.jpg"
+                src="/to_taher.png"
                 alt="Hero"
                 className="absolute inset-0 h-full w-full object-cover object-center"
             />

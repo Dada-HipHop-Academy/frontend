@@ -71,7 +71,7 @@ export default function SutdioMusique() {
     ];
 
     return (
-        <div className="w-full overflow-hidden py-28">
+        <div className="w-full overflow-hidden pt-28 pb-15">
             <div className="px-4 md:px-6 lg:px-16">
                 <section>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-15 md:mb-20">
