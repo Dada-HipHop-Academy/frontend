@@ -1,5 +1,8 @@
+"use client";
+
+import { DropdownFilter } from "@/app/components/layout/DropdownFilter";
 import { EventCard } from "@/app/components/layout/EventCard";
-import { EventFilter } from "@/app/components/layout/EventFilter";
+import { Heart, Music, Radio, Target, Users } from "lucide-react";
 
 export default function WorkshopsEvenements() {
     const filters = [
@@ -44,6 +47,15 @@ export default function WorkshopsEvenements() {
         }
     ];
 
+    const categories = [
+        { id: "all", name: "Tous", icon: null },
+        { id: "dance", name: "Dance", icon: Music },
+        { id: "masterclass", name: "Master Class", icon: Users },
+        { id: "battles", name: "Battles et spectacles", icon: Target },
+        { id: "activities", name: "Activités spéciales pour les clubs et les familles", icon: Heart },
+        { id: "workshops", name: "Ateliers musicaux et de création chorégraphique", icon: Radio }
+    ];
+
     const currentFilter = "Tous";
 
     return (
@@ -62,7 +74,7 @@ export default function WorkshopsEvenements() {
                         <h2 className="font-bebas text-2xl md:text-3xl tracking-wider">
                             Prochains <span className="text-[#E63946]">evenements</span>
                         </h2>
-                        <EventFilter className="w-full md:w-100" />
+                        <DropdownFilter className="w-full md:w-100" categories={categories} />
                     </div>
                     <div className="grid grid-cols-1 mt-10 md:mt-15 gap-6 md:gap-10">
                         {events.map((event, index) => (

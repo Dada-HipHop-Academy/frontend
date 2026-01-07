@@ -1,20 +1,30 @@
 "use client";
 
-import { ChevronDown, Heart, Music, Radio, Target, Users } from "lucide-react";
-import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
-export function EventFilter({ className = '' }) {
+export function DropdownFilter({ className = '', categories }) {
     const [selectedCategory, setSelectedCategory] = useState("Tous");
     const [isOpen, setIsOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
 
-    const categories = [
-        { id: "all", name: "Tous", icon: null },
-        { id: "dance", name: "Dance", icon: Music },
-        { id: "masterclass", name: "Master Class", icon: Users },
-        { id: "battles", name: "Battles et spectacles", icon: Target },
-        { id: "activities", name: "Activités spéciales pour les clubs et les familles", icon: Heart },
-        { id: "workshops", name: "Ateliers musicaux et de création chorégraphique", icon: Radio }
-    ];
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+
+        // Add event listener when dropdown is open
+        if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        // Cleanup event listener
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isOpen]);
 
     const handleClick = (category: any) => {
         setSelectedCategory(category.name);
@@ -22,7 +32,7 @@ export function EventFilter({ className = '' }) {
     }
 
     return (
-        <div className={className}>
+        <div className={className} ref={dropdownRef}>
             <div className="relative">
                 {/*Dropdown button*/}
                 <button onClick={() => setIsOpen(!isOpen)} className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg flex items-center justify-between cursor-pointer">
@@ -32,7 +42,7 @@ export function EventFilter({ className = '' }) {
                 {/*Dropdown menu*/}
                 {isOpen && (
                     <div className="absolute top-full left-0 right-0 mt-2 bg-white border-2 border-gray-300 rounded-lg shadow-lg z-50 overflow-hidden">
-                        {categories.map((category) => {
+                        {categories.map((category: any) => {
                             const Icon = category.icon;
                             return (
                                 <button
@@ -41,7 +51,7 @@ export function EventFilter({ className = '' }) {
                                     className="cursor-pointer w-full px-4 py-3 flex items-center gap-3 hover:bg-red-50 transition-colors text-left border-b border-gray-100 last:border-b-0"
                                 >
                                     {Icon && (
-                                        <div className="w-8 h-8 flex items-center justify-center bg-red-200 rounded-full flex-shrink-0">
+                                        <div className="w-8 h-8 flex items-center justify-center bg-red-200 rounded-full shrink-0">
                                             <Icon className="w-4 h-4 text-[#E63946]" />
                                         </div>
                                     )}

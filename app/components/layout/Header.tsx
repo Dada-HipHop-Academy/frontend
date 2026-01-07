@@ -2,11 +2,30 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Header = () => {
     const pathName = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+    
+        useEffect(() => {
+            const handleClickOutside = (event: MouseEvent) => {
+                if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                    setIsMenuOpen(false);
+                }
+            };
+    
+            // Add event listener when dropdown is open
+            if (isMenuOpen) {
+                document.addEventListener('mousedown', handleClickOutside);
+            }
+    
+            // Cleanup event listener
+            return () => {
+                document.removeEventListener('mousedown', handleClickOutside);
+            };
+        }, [isMenuOpen]);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
@@ -16,8 +35,8 @@ const Header = () => {
         { href: "/cours-activites", label: "Cours & Activités" },
         { href: "/studio-musique", label: "Studio Musique" },
         { href: "/workshops-evenements", label: "Workshops & Événements" },
+        { href: "/galerie-media", label: "Galerie Média" },
         { href: "/actualités", label: "Actualités" },
-        { href: "/dada-réseaux-artist", label: "Dada Réseaux Artist" }
     ];
 
     return (
@@ -46,10 +65,10 @@ const Header = () => {
                 </button>
             </div>
             {isMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-4">
+                <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-4" ref={dropdownRef}>
                     <div className="flex flex-col space-y-4">
                         {navItems.map((item) => (
-                            <Link href={item.href} key={item.href} className={`hover:bg-[#4ECDC4] flex items-center cursor-pointer text-black py-1 px-2 rounded-md ${pathName === item.href ? "bg-[#4ECDC4]" : "bg-white"}`}>
+                            <Link href={item.href} key={item.href} className={`hover:bg-[#4ECDC4] flex items-center cursor-pointer text-black py-1 px-2 rounded-md ${pathName === item.href ? "bg-[#4ECDC4]" : "bg-white"}`} onClick={toggleMenu}>
                                 {item.label}
                             </Link>
                         ))}
