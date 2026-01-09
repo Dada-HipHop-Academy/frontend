@@ -48,7 +48,7 @@ export default function WorkshopsEvenements() {
     ];
 
     const categories = [
-        { id: "all", name: "Tous", icon: null },
+        { id: "all", name: "Tous", icon: undefined },
         { id: "dance", name: "Dance", icon: Music },
         { id: "masterclass", name: "Master Class", icon: Users },
         { id: "battles", name: "Battles et spectacles", icon: Target },

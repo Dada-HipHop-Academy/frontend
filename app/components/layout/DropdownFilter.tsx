@@ -3,7 +3,18 @@
 import { ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-export function DropdownFilter({ className = '', categories }) {
+type Category = {
+    id: string | number;
+    name: string;
+    icon?: React.ComponentType<{ className?: string }>;
+};
+
+interface DropdownFilterProps {
+    className?: string;
+    categories: Category[];
+}
+
+export function DropdownFilter({ className = '', categories }: DropdownFilterProps) {
     const [selectedCategory, setSelectedCategory] = useState("Tous");
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);

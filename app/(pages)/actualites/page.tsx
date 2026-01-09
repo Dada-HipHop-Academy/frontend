@@ -5,7 +5,7 @@ import { Clapperboard, HeartPulse, MicVocal, PersonStanding, Play, Tv, Users, Vo
 
 export default function Actualites() {
     const categories = [
-        { id: "all", name: "Tous", icon: null },
+        { id: "all", name: "Tous", icon: undefined },
         { id: "Sport", name: "Sport", icon: Volleyball },
         { id: "HipHop", name: "HipHop", icon: MicVocal },
         { id: "Dance", name: "Dance", icon: PersonStanding },

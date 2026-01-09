@@ -6,7 +6,7 @@ import { Play, Users, Tv, Clapperboard } from "lucide-react";
 
 export default function GalerieMedia() {
     const categories = [
-        { id: "all", name: "Tous", icon: null },
+        { id: "all", name: "Tous", icon: undefined },
         { id: "shows", name: "Shows", icon: Tv },
         { id: "cours", name: "Cours", icon: Users },
         { id: "coulisses", name: "Coulisses", icon: Clapperboard },

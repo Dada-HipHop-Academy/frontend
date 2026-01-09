@@ -1,4 +1,15 @@
-export function EventCard({ event }) {
+type Event = {
+    image: string;
+    name: string;
+    month: string;
+    day: string | number;
+    category: string;
+    description: string;
+    place: string;
+    time: string;
+};
+
+export function EventCard({ event }: { event: Event }) {
     return (
         <div className="border-2 border-gray-300 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
             <div className="flex flex-col sm:flex-row p-6 gap-10">
