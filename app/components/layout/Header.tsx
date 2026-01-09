@@ -35,8 +35,8 @@ const Header = () => {
         { href: "/cours-activites", label: "Cours & Activités" },
         { href: "/studio-musique", label: "Studio Musique" },
         { href: "/workshops-evenements", label: "Workshops & Événements" },
+        { href: "/actualites", label: "Actualités" },
         { href: "/galerie-media", label: "Galerie Média" },
-        { href: "/actualités", label: "Actualités" },
     ];
 
     return (

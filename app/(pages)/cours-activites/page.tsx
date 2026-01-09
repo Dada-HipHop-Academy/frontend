@@ -71,9 +71,12 @@ export default function CoursActivites() {
                                 alt="Dada Academy"
                                 className="w-full rounded-4xl object-cover md:hidden mb-3"
                             />
-                            <p className="text-lg">
+                            <p className="text-lg mb-3 md:mb-6">
                                 Découvrez une variété de cours conçus pour développer votre technique, votre forme physique et votre créativité. Nos coachs qualifiés vous accompagnent à chaque étape.
                             </p>
+                            <button className='px-12 py-2 text-lg font-bold bg-[#E63946] text-white rounded-lg cursor-pointer hover:bg-[#E63946]/90'>
+                                Contactez Nous
+                            </button>
                         </div>
                     </div>
                 </section>
