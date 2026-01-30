@@ -47,7 +47,7 @@ export default function CoursActivites() {
         { image: "/cours1.png", label: "Hip-Hop" },
         { image: "/cours2.png", label: "Breakdance" },
         { image: "/cours3.png", label: "Fitness" },
-        { image: "/cours4.png", label: "Yoga" },
+        { image: "/yoga.jpg", label: "Yoga" },
         { image: "/cours4.png", label: "Classique" }
     ];
 
@@ -110,7 +110,7 @@ export default function CoursActivites() {
                                 <div className="relative w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-red-500 transition items-center justify-center flex">
                                     <img
                                         src={club.image}
-                                        className="object-cover"
+                                        className="object-center"
                                     />
                                 </div>
                                 <span className="mt-3 text-2xl text-[#E63946] tracking-wider uppercase font-bebas">
@@ -118,23 +118,6 @@ export default function CoursActivites() {
                                 </span>
                             </div>
                         ))}
-                    </div>
-                    <div className="lg:hidden py-8 overflow-x-auto">
-                        <div className="flex gap-6 px-4">
-                            {clubsData.map((club, index) => (
-                                <div key={index} className="flex flex-col items-center cursor-pointer group min-w-40">
-                                    <div className="relative w-40 h-40 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-red-500 transition items-center justify-center flex">
-                                        <img
-                                            src={club.image}
-                                            className="object-cover"
-                                        />
-                                    </div>
-                                    <span className="mt-3 text-2xl text-[#E63946] tracking-wider uppercase font-bebas">
-                                        {club.label}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
                     </div>
                     <div className="flex justify-center items-center">
                         <button className="bg-[#E63946] py-2 px-10 rounded-lg text-white cursor-pointer hover:bg-red-700 transition-all font-bebas tracking-widest text-lg">
